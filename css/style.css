@@ -1,19 +1,23 @@
+/* 1. VARIABLES Y BASE */
 :root {
     --beige-fondo: #FDFBF0;
     --verde-dino: #82A36F;
     --marron-madera: #795548;
+    --coral-dino: #FF7F50;
+    --texto-oscuro: #333;
+    --marron-huevo: #5D4037;
 }
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     background-color: var(--beige-fondo);
-    color: #333;
+    color: var(--texto-oscuro);
     text-align: center;
     overflow-x: hidden;
 }
 
-/* --- LLUVIA DE FONDO INFINITA --- */
+/* 2. EFECTOS DE FONDO */
 .dino-rain {
     position: fixed;
     top: 0;
@@ -26,119 +30,138 @@ body {
     opacity: 0.2;
 }
 
-/* --- EL TRUCO DEL BUCLE PERFECTO --- */
 .dino-rain::after {
     /* IMPORTANTE: Copia y pega esta cadena larga de iconos */
     content: "🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 v 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 v v 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 🦖 🥚 🍃 🦕 🦴 "; 
-    
-    position: absolute;
+position: absolute;
     top: 0; 
     left: -50vw;
     width: 200vw;
-    /* Altura muy grande para que el patrón se repita */
     height: 1000%; 
-    
     font-size: clamp(1.2rem, 4vw, 2rem);
     line-height: 150px; 
     word-spacing: 100px;
     display: block;
     white-space: pre-wrap; 
-    
-    /* Animación lineal y continua */
     animation: rainFall 40s linear infinite;
     color: #94a886;
 }
 
 @keyframes rainFall {
-    0% {
-        transform: translateY(-50%); /* Empieza a mitad del bloque */
-    }
-    100% {
-        transform: translateY(0%); /* Termina al inicio del bloque */
-    }
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0%); }
 }
 
-/* --- INPUT Y BOTONES --- */
-.rsvp {
-    padding: 40px 20px;
-    background: white;
-    border-radius: 40px 40px 0 0;
-    margin-top: 30px;
-}
-
-input {
-    width: 90%;
-    max-width: 400px;
-    padding: 15px;
-    border: 2px solid #eee;
-    border-radius: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    outline: none;
-}
-
-input:focus {
-    border-color: var(--verde-dino);
-}
-
-.btn-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 15px 25px;
-    border: none;
-    border-radius: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-yes {
-    background-color: var(--verde-dino);
-    color: white;
-}
-
-.btn-no {
-    background-color: #f5f5f5;
-    color: #999;
-}
-
-/* Hero */
+/* 3. HERO (PRESENTACIÓN) */
 .hero { padding: 50px 20px; }
+
 .main-photo-frame {
     width: 180px; height: 180px; margin: auto;
     border-radius: 40px; border: 8px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;
 }
-.main-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-h1 { font-family: 'Luckiest Guy', cursive; color: var(--verde-dino); font-size: 2.5rem; margin: 15px 0; }
-.frase { font-weight: 600; color: var(--marron-madera); max-width: 400px; margin: auto; }
 
-/* CARRUSEL INTEGRADO */
+.main-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+h1 { 
+    font-family: 'Luckiest Guy', cursive; 
+    color: var(--verde-dino); 
+    font-size: 2.5rem; 
+    margin: 15px 0; 
+}
+
+.frase { 
+    font-size: 1.2rem;
+    font-weight: 600; 
+    color: var(--marron-madera); 
+    max-width: 400px; 
+    margin: auto; 
+}
+
+/* 4. SECCIONES (TÍTULOS COMUNES) */
+.section-title {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    color: var(--verde-dino);
+    letter-spacing: 1px; 
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* 5. CRONÓMETRO DE HUEVOS */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 20px 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.egg-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 90px;
+}
+
+.egg-visual {
+    background-image: url('https://img.icons8.com/emoji/160/egg-emoji.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 1.1 / 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: jumpWave 1.4s ease-in-out infinite;
+}
+
+/* Retrasos de la ola */
+.egg-item:nth-child(1) .egg-visual { animation-delay: 0.0s; }
+.egg-item:nth-child(2) .egg-visual { animation-delay: 0.2s; }
+.egg-item:nth-child(3) .egg-visual { animation-delay: 0.4s; }
+.egg-item:nth-child(4) .egg-visual { animation-delay: 0.6s; }
+
+.egg-visual span {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    color: var(--marron-madera);
+    margin-top: 10px;
+}
+
+.egg-item small {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 0.9rem);
+    font-weight: 800;
+    color: var(--marron-madera);
+    margin-top: 1px;
+    text-transform: uppercase;
+}
+
+@keyframes jumpWave {
+    0%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-15px); }
+    60% { transform: translateY(0); }
+}
+
+/* 6. CARRUSEL INSTAGRAM */
 .carousel {
     width: 100%;
-    max-width: 100%;
     overflow-x: auto;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     padding: 20px 0;
     cursor: grab;
 }
+
 .carousel::-webkit-scrollbar { display: none; }
 
-.card {
-    flex: 0 0 80%;
-    scroll-snap-align: center;
-}
+.card { flex: 0 0 73%; scroll-snap-align: center; }
 
 .insta-card {
     background: white;
@@ -154,15 +177,15 @@ h1 { font-family: 'Luckiest Guy', cursive; color: var(--verde-dino); font-size: 
 .perfil img { width: 100%; height: 100%; object-fit: cover; }
 .username { font-weight: bold; font-size: 14px; }
 .insta-photo img { width: 100%; display: block; aspect-ratio: 4/5; object-fit: cover; }
-.actions { padding: 10px 12px; font-size: 22px; cursor: pointer; }
-.like { user-select: none; transition: .2s; }
+.actions { padding: 10px 12px; font-size: 22px; }
+.like { user-select: none; transition: .2s; cursor: pointer; }
 .like.liked { color: red; transform: scale(1.2); }
 .likes { padding: 0 12px 14px 12px; font-size: 14px; font-weight: bold; }
 
-/* MAPA INTEGRADO */
+/* 7. MAPA */
 .map-section { padding: 40px 20px; }
 .map-frame {
-    max-width: 420px;
+    max-width: 350px;
     margin: auto;
     border-radius: 20px;
     overflow: hidden;
@@ -171,69 +194,67 @@ h1 { font-family: 'Luckiest Guy', cursive; color: var(--verde-dino); font-size: 
 }
 .location-text { margin-top: 15px; font-weight: 600; color: var(--marron-madera); }
 
-/* Títulos y Contenedores */
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
-    color: #333;
-    margin-bottom: 20px;
+/* 8. CONFIRMACIÓN (RSVP / WHATSAPP) */
+.rsvp {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 50px 50px 0 0;
+    margin-top: 20px;
 }
 
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px;
-    width: 100%;
-}
-
-.egg-item {
-    background-image: url('https://img.icons8.com/emoji/160/egg-emoji.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: clamp(100px, 28vw, 150px); 
-    height: clamp(130px, 35vw, 190px);
+.btn-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.egg-item span {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: clamp(1.8rem, 6vw, 2.8rem);
-    color: var(--marron-madera);
-    margin-top: 20px;
-    line-height: 1;
+.btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 80%;
+    max-width: 300px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.egg-item small {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-    font-weight: 800;
-    color: var(--verde-dino);
-    letter-spacing: 1px;
-    margin-top: 5px;
+.btn i { font-size: 1.4rem; }
+
+.btn-yes {
+    background-color: var(--verde-dino);
+    color: white;
+    border: 2px solid var(--verde-dino);
 }
 
-.egg-item:hover {
-    transform: scale(1.05);
+.btn-no {
+    background-color: transparent;
+    color: var(--coral-dino);
+    border: 2px solid var(--coral-dino);
 }
 
-/* --- MEDIA QUERIES --- */
+.btn-yes:hover { background-color: white; color: var(--verde-dino); }
+.btn-no:hover { background-color: var(--coral-dino); color: white; }
+.btn:active { transform: translateY(2px); }
+
+/* 9. MEDIA QUERIES (ADAPTACIÓN) */
 @media (max-width: 350px) {
-    .countdown-container {
-        gap: 10px;
-    }
-    .egg-item {
-        width: 90px;
-        height: 120px;
-    }
-} /* <-- ESTA LLAVE FALTABA Y ROMPÍA EL CÓDIGO */
+    .countdown-container { gap: 5px; }
+    .egg-item { max-width: 75px; }
+    .egg-visual span { font-size: 1.4rem; }
+}
+
+@media (min-width: 600px) {
+    .btn-group { flex-direction: row; justify-content: center; }
+}
 
 @media (min-width: 900px) {
     .carousel { justify-content: center; }

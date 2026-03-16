@@ -49,7 +49,7 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 // --- 3. Cronómetro ---
-const targetDate = new Date(2026, 5, 15, 16, 0).getTime();
+const targetDate = new Date(2026, 4, 9, 17, 0).getTime();
 
 function updateTimer() {
     const now = new Date().getTime();
@@ -60,10 +60,12 @@ function updateTimer() {
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000); // Segundos calculados
 
     document.getElementById('days').innerText = d < 10 ? '0' + d : d;
     document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
     document.getElementById('mins').innerText = m < 10 ? '0' + m : m;
+    document.getElementById('secs').innerText = s < 10 ? '0' + s : s;
 }
 
 setInterval(updateTimer, 1000);
