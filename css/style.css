@@ -79,8 +79,8 @@ h1 {
 }
 
 .main-photo-frame {
-    width: 180px; height: 180px; margin: auto;
-    border-radius: 40px; border: 8px solid var(--marron-madera);
+    width: 200px; height: 200px; margin: auto;
+    border-radius: 40px; border: 10px solid var(--marron-madera);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;
 }
 
