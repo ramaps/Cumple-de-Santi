@@ -216,7 +216,7 @@ h1 {
     margin: auto;
     border-radius: 20px;
     overflow: hidden;
-    border: 6px solid white;
+    border: 6px solid var(--verde-dino);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 .location-text { margin-top: 15px; font-weight: 600; color: var(--marron-madera); }
