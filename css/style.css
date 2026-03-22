@@ -80,7 +80,7 @@ h1 {
 
 .main-photo-frame {
     width: 200px; height: 200px; margin: auto;
-    border-radius: 40px; border: 8px solid var(--marron-madera);
+    border-radius: 40px; border: 8px solid var(--verde-dino);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;
 }
 
